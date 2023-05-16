@@ -431,3 +431,6 @@
     align-items: center;
     height: 100vh;
 }
+.input_row {
+    margin-right: 10px;
+}
