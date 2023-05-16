@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background-color: lightgray;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: navy;
+  padding: 8px 12px;
+}
