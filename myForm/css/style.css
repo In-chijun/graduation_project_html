@@ -2,6 +2,10 @@ body {
   margin: 0;
   background-color: lightgray;
 }
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
 
 .navbar {
   display: flex;
@@ -9,4 +13,73 @@ body {
   align-items: center;
   background-color: navy;
   padding: 8px 12px;
+}
+.navbar__logo i {
+  color: orange;
+  padding-left: 0;
+}
+
+.navbar__menu {
+  list-style: none; /* li 태그 앞에 있는 구분점 삭제 */
+  display: flex; /* 수평 배치 */
+  margin: 0;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 30px; /* 버튼들이 서로 떨어지게 패딩 추가 */
+}
+.navbar__menu li:hover {
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.navbar__icons {
+  list-style: none;
+  display: flex;
+  color: skyblue;
+  margin: 0;
+  padding-left: 0;
+}
+.navbar__icons li {
+  padding: 8px 12px;
+  margin: 0;
+}
+
+.navbar__toggleBtn {
+  color: orange;
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 700px) { /* nav바가 일정 크기 작아지면 해당 블록 코드가 적용됨 */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toggleBtn {
+    display: block;
+  }
+  .navbar__menu.active, .navbar__icons.active {
+    display: flex;
+  }
 }

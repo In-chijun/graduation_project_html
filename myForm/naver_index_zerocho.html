@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><!-- head는 html 문서에 대한 설명 -->
+    <!--  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- InternetExplorer 열면 엣지로 열라는 뜻으로 있으면 좋다. -->
+    <style>
+        * {
+            box-sizing: border-box; /* 크기를 border까지로 적용하는 것.(기본값은 content-box) */
+        }
+        html, body { /* 기본적으로 html과 body의 마진과 패딩을 없애주는 것이 좋다. */
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            display: flex;
+            justify-content: center;
+        }
+        #header-center {
+            width: 1130px;
+            height: 160px;
+            background-color: yellow;
+            display: flex;
+        }
+        #header-logo, #header-search, #header-home {
+            display: inline-block;
+        }
+        #header-logo {
+            width: 238px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        #header-logo a {
+            width: 222px;
+            height: 52px;
+        }
+        #header-logo a::before {
+            background-image: url(./sp_main.png); /* ./는 현재 폴더를 뜻한다. (..은 부모 폴더-현재 폴더가 Naver_zerocho) */
+            background-size: 442px 428px;
+            width: 222px;
+            height: 52px;
+            content: ''; /* before할 때는 content가 있어야 적용된다. */
+            display: inline-block; /* display:inline으로 하면 width가 표시되지 않는다. */
+            background-position: 0px -158px; /* 수많은 이미지 중에서 원하는 이미지의 위치를 선택하기 위한 코드 */
+            position: relative;
+            top: -6px;
+            left: -9px;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden; /* 차지하는 공간은 존재하기 때문에 스크린리더기가 읽는다. */
+            /* display: none; 차지하는 공간마져 삭제해버려서 스크린리더기가 무시함*/
+        }
+        #header-search {
+            width: 586px;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        #header-home {
+
+        }
+        #header-search form {
+            margin: 0;
+            display: flex;
+        }
+        #header-search-wrap {
+            border: 2px solid #19ce60;
+            border-radius: 2px; /* 둥글게 함 */
+            width: 532px;
+            height: 56px;
+            background-color: #fff;
+            display: inline-flex;
+        }
+        #header-search-input {
+            padding: 13px 15px;
+            border: none;
+            outline: none; /* 마우스 클릭하면 테두리 검은색으로 변하는 것 없애기 */
+            width: 444px;
+            height: 100%;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 700;
+        }
+        #header-search-input::placeholder {
+            color: white;
+        }
+        #header-search-button {
+            width: 54px;
+            height: 56px;
+            background: #19ce60;
+            display: inline-flex; /* flex 자체도 블록이기 때문에 inline으로 하면 inline 안으로 들어온다. */
+            justify-content: center; /* 가로 가운데 정렬*/
+            align-items: center; /* 세로 가운데 정렬*/
+            border: none;
+        }
+        #header-search-button:before {
+            background-image: url(./sp_main.png); /* ./는 현재 폴더를 뜻한다. (..은 부모 폴더-현재 폴더가 Naver_zerocho) */
+            background-size: 442px 428px;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            content: '';
+            background-position: -420px 0;
+            position: relative;
+            left: -1px;
+        }
+        #header-keyboard {
+            display: inline-flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        #header-keyboard .keyboard {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 12px;
+            background-position: -398px -267px;
+            background-repeat: no-repeat;
+            margin: 0px 12px;
+        }
+        #header-keyboard .more {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 5px;
+            background-position: -170px -151px;
+            background-repeat: no-repeat;
+            margin-right: 14px;
+        }
+        #main {
+            height: 9999px;
+            background-color: lightgray;
+        }
+    </style>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"><!-- 모바일로 볼 때 크기가 작아지지 않게 하는 것. -->
+    <title>NAVER</title>
+</head>
+<body><!-- 화면부에 대한 코딩 -->
+    <div id="header">
+        <div id="header-center">
+            <div id="header-logo">
+                <a href="#">
+                    <span class="blind">로고</span>
+                </a>
+            </div>
+            <div id="header-search">
+                <form>
+                    <label class="blind" for="header-search-input">검색창</label><!-- 시각장애인 위한 코드 -->
+                    <div id="header-search-wrap">
+                        <input id="header-search-input" placeholder="검색어를 입력해주세요."/>
+                        <div id="header-keyboard">
+                            <i class="keyboard"><span class="blind">키보드</span></i>
+                            <i class="more"><span class="blind">더보기</span></i>
+                        </div>
+                    </div>
+                    <button id="header-search-button">
+                        <span class="blind">검색</span><!-- 시각장애인 위한 코드 -->
+                    </button>
+                </form>
+            </div>
+            <div id="header-home">네이버를 시작페이지로</div>
+        </div>
+    </div>
+    <div id="main"></div>
+</body>
+</html>
