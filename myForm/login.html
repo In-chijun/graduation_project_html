@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-
-    <title>로그인</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"defer></script>
+    <title>Nav Bar</title>
 </head>
-<body>
-    <!--  상단 바  -->
-    <div>
-        <header>
-            <div>
-                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                    <a class="toMain" href="main.html"> <!--  main.html을 만들어야 한다.  -->
-                        <span style="font-size: 32px;">SECS</span>
-                    </a>
-                    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span></span>
-                    </button>
-                    <ul class="navbar-nav  ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> About </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="service.html"> Service </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact us</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                    </form>
-                </nav>
-            </div>
-        </header>
 
+<body>
+<nav class="navbar">
+
+    <div class="navbar__logo">
+        <a href="">SECS</a>
     </div>
+
+    <ul class="navbar__menu">
+        <li><a href="#">Introduce</a></li>
+        <li><a href="#">IoT Space</a></li>
+        <li><a href="#">AIoT Space</a></li>
+    </ul>
+
+    <ul class="navbar__sign">
+        <li><a id="navbar__sign-in" href="#">Sign in</a></li>
+        <li><a id="navbar__sign-up" href="#">Sign up</a></li>
+    </ul>
+
+    <a href="#" class="navbar__toggleBtn"></a>
+</nav>
 </body>
 </html>
