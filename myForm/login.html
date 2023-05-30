@@ -31,79 +31,43 @@
         <a href="#" class="navbar__toggleBtn"></a>
     </nav>
 
-    <div>
-        <div>Sign in to SECS</div>
-        <form id="frmNIDLogin" name="frmNIDLogin" target="_top" autocomplete="off" action="https://nid.naver.com/nidlogin.login" method="POST">
-            <input type="text" id="id" name="id" placeholder="아이디" title="아이디" class="input_text" maxlength="41" value="">
-            <span role="button" class="btn_delete" id="id_clear" style="display: block;">
-                        <span class="icon_delete">
-                            <span class="blind">삭제</span>
-                        </span>
-                    </span>
+    <div id="login">
+
+        <div class="login_wrap" id="login_ment">
+            Sign in to SECS
         </div>
-        <div class="input_row" id="pw_line">
-            <div class="icon_cell" id="pw_cell">
-                        <span class="icon_pw">
-                            <span class="blind">비밀번호</span>
-                        </span>
+
+        <form action="#" method="POST" autocomplete="off">
+
+            <div class="login_highMargin">
+                <input type="text" id="id" name="id" placeholder=" SECS ID" title="아이디" class="input_text" maxlength="41" value="">
+<!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->
+<!--                    <span class="icon_delete">-->
+<!--                        <span class="blind">삭제</span>-->
+<!--                    </span>-->
+<!--                </span>-->
             </div>
-            <input type="password" id="pw" name="pw" placeholder="비밀번호" title="비밀번호" class="input_text" maxlength="16">
-                                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">
-                                            <span class="icon_delete">
-                                                <span class="blind">삭제</span>
-                                            </span>
-                                        </span>
-                            </div>
-                        </div>
-                        <div class="login_keep_wrap" id="login_keep_wrap">
-                            <div class="keep_check">
-                                <input type="checkbox" id="keep" name="nvlong" class="input_keep" value="off">
-                                <label for="keep" class="keep_text">로그인 상태 유지</label>
-                            </div>
-                            <div class="ip_check">
-                                <a href="/login/ext/help_ip3.html" target="_blank" id="ipguide" title="IP보안"><span class="ip_text">IP보안</span></a>
-                                <span class="switch">
-                                            <input type="checkbox" id="switch" class="switch_checkbox" value="off">
-                                            <label for="switch" class="switch_btn">
-                                                <span class="blind" id="switch_blind">on</span>
-                                            </label>
-                                        </span>
-                            </div>
-                        </div>
 
-                        <div class="login_error_wrap" id="err_capslock" style="display: none;">
-                            <div class="error_message">
-                                <strong>CapsLock</strong>이 켜져 있습니다.
-                            </div>
-                        </div>
+            <div class="login_wrap" id="pw_line">
+                <input type="password" id="pw" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
+<!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
+<!--                    <span class="icon_delete">-->
+<!--                        <span class="blind">삭제</span>-->
+<!--                    </span>-->
+<!--                </span>-->
+            </div>
 
-                        <div class="login_error_wrap" id="err_empty_id" style="display: none;">
-                            <div class="error_message">
-                                <strong>아이디</strong>를 입력해 주세요.
-                            </div>
-                        </div>
+            <div class="login_wrap">
+                <button type="submit" class="btn_login" id="log.login">
+                    <span class="btn_text">Sign in</span>
+                </button>
+            </div>
 
-                        <div class="login_error_wrap" id="err_empty_pw" style="display: none;">
-                            <div class="error_message">
-                                <strong>비밀번호</strong>를 입력해 주세요.
-                            </div>
-                        </div>
-                        <div class="login_error_wrap" id="err_common" style="display:none;">
-                            <div class="error_message" style="width:90%">
-
-                            </div>
-                        </div>
-                        <div class="btn_login_wrap">
-
-                            <button type="submit" class="btn_login" id="log.login">
-                                <span class="btn_text">로그인</span>
-                            </button>
-
-                        </div>
-                    </div>
-                </li>
-            </ul>
         </form>
+
+        <div class="login_highMargin">
+            <p>SECS 계정이 없으신가요? <button id="login-signIn_btn" href="signIn.html">지금 만드세요.</button></p>
+        </div>
     </div>
 </body>
 </html>
