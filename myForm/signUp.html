@@ -40,26 +40,23 @@
         <form action="#" method="POST" autocomplete="off">
 
             <div class="login_highMargin">
-                <input type="text" name="id" placeholder=" SECS ID" title="아이디" class="input_text" maxlength="41" value="">
-<!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->
-<!--                    <span class="icon_delete">-->
-<!--                        <span class="blind">삭제</span>-->
-<!--                    </span>-->
-<!--                </span>-->
+                                    <!-- norm-text css 만들어야 함 -->
+                <input type="text" class="norm-text" name="id" placeholder=" Username" title="이름" class="input_text" maxlength="41" value="">
             </div>
-
+            <div class="login_highMargin">
+                <input type="email" class="norm-text" name="id" placeholder=" Email" title="이메일" class="input_text" maxlength="41" value="">
+            </div>
+            새 SECS ID로 사용될 주소입니다.
             <div class="login_wrap" id="pw_line">
-                <input type="password" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
-<!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
-<!--                    <span class="icon_delete">-->
-<!--                        <span class="blind">삭제</span>-->
-<!--                    </span>-->
-<!--                </span>-->
+                <input type="password" id="pw" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
+            </div>
+            <div class="login_wrap" id="pw_line">
+                <input type="password" id="pw" name="pw" placeholder=" Confirm Password" title="비밀번호 확인" class="input_text" maxlength="16">
             </div>
 
             <div class="login_wrap">
                 <button type="submit" class="btn_login" id="log.login">
-                    <span class="btn_text">Sign in</span>
+                    <span class="btn_text">Sign up</span>
                 </button>
             </div>
 
