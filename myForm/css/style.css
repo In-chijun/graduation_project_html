@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; /* 크기를 border까지로 적용하는 것.(기본값은 content-box) */
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -121,12 +124,15 @@ a {
 }
 
 #login {
+  position: relative;
+}
+#login-div {
   display: grid;
   place-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 20%);
 }
 #login_ment {
   font-size: 30px;
