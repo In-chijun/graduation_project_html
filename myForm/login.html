@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"defer></script>
-    <title>Nav Bar</title>
+    <title>Login</title>
 </head>
 
 <body>
     <nav class="navbar">
 
         <div class="navbar__logo">
-            <a href="">SECS</a>
+            <a href="main.html">SECS</a>
         </div>
 
         <ul class="navbar__menu">
@@ -24,16 +24,16 @@
         </ul>
 
         <ul class="navbar__sign">
-            <li><a id="navbar__sign-in" href="#">Sign in</a></li>
-            <li><a id="navbar__sign-up" href="#">Sign up</a></li>
+            <li><a id="navbar__sign-in" href="login.html">Sign in</a></li>
+            <li><a id="navbar__sign-up" href="signUp.html">Sign up</a></li>
         </ul>
 
         <a href="#" class="navbar__toggleBtn"></a>
     </nav>
 
-    <div id="login">
-        <div id="login-div">
-            <div class="login_wrap" id="login_ment">
+    <div class="login_signUp">
+        <div class="login_signUp-sign_div">
+            <div class="login_margin" id="login_ment">
                 Sign in to SECS
             </div>
 
@@ -48,7 +48,7 @@
     <!--                </span>-->
                 </div>
 
-                <div class="login_wrap" id="pw_line">
+                <div class="login_margin">
                     <input type="password" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
     <!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
     <!--                    <span class="icon_delete">-->
@@ -57,8 +57,8 @@
     <!--                </span>-->
                 </div>
 
-                <div class="login_wrap">
-                    <button type="submit" class="btn_login" id="log.login">
+                <div class="login_margin">
+                    <button type="submit" class="btn_login">
                         <span class="btn_text">Sign in</span>
                     </button>
                 </div>

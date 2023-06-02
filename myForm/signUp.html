@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"defer></script>
-    <title>Nav Bar</title>
+    <title>Sign-Up</title>
 </head>
 
 <body>
     <nav class="navbar">
 
         <div class="navbar__logo">
-            <a href="">SECS</a>
+            <a href="main.html">SECS</a>
         </div>
 
         <ul class="navbar__menu">
@@ -24,46 +24,41 @@
         </ul>
 
         <ul class="navbar__sign">
-            <li><a id="navbar__sign-in" href="#">Sign in</a></li>
-            <li><a id="navbar__sign-up" href="#">Sign up</a></li>
+            <li><a id="navbar__sign-in" href="login.html">Sign in</a></li>
+            <li><a id="navbar__sign-up" href="signUp.html">Sign up</a></li>
         </ul>
 
         <a href="#" class="navbar__toggleBtn"></a>
     </nav>
 
-    <div id="login">
-
-        <div class="login_wrap" id="login_ment">
-            Sign in to SECS
-        </div>
-
-        <form action="#" method="POST" autocomplete="off">
-
-            <div class="login_highMargin">
-                                    <!-- norm-text css 만들어야 함 -->
-                <input type="text" class="norm-text" name="id" placeholder=" Username" title="이름" class="input_text" maxlength="41" value="">
-            </div>
-            <div class="login_highMargin">
-                <input type="email" class="norm-text" name="id" placeholder=" Email" title="이메일" class="input_text" maxlength="41" value="">
-            </div>
-            새 SECS ID로 사용될 주소입니다.
-            <div class="login_wrap" id="pw_line">
-                <input type="password" id="pw" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
-            </div>
-            <div class="login_wrap" id="pw_line">
-                <input type="password" id="pw" name="pw" placeholder=" Confirm Password" title="비밀번호 확인" class="input_text" maxlength="16">
+    <div class="login_signUp">
+        <div class="login_signUp-sign_div">
+            <div id="signUp_ment">
+                SECS ID 생성
             </div>
 
-            <div class="login_wrap">
-                <button type="submit" class="btn_login" id="log.login">
-                    <span class="btn_text">Sign up</span>
-                </button>
-            </div>
+            <form action="#" method="POST" autocomplete="off">
 
-        </form>
+                <div class="login_highMargin">
+                    <input type="text" class="input_text" name="id" placeholder=" Username" title="이름" class="input_text" maxlength="41" value="">
+                </div>
+                <div class="login_margin">
+                    <input type="email" class="input_text" name="email" placeholder=" Email" title="이메일" class="input_text" maxlength="41" value="">
+                </div>
+                새 SECS ID로 사용될 주소입니다.
+                <div class="login_margin">
+                    <input type="password" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
+                </div>
+                <div class="login_margin">
+                    <input type="password" name="pw" placeholder=" Confirm Password" title="비밀번호 확인" class="input_text" maxlength="16">
+                </div>
 
-        <div class="login_highMargin">
-            <p>SECS 계정이 없으신가요? <button id="login-signIn_btn" href="signIn.html">지금 만드세요.</button></p>
+                <div class="login_margin">
+                    <button type="submit" class="btn_signUp">
+                        <span class="btn_text">Sign up</span>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
