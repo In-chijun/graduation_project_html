@@ -1,0 +1,120 @@
+.stats_graph_box {
+  position: relative;
+  padding-bottom: 20px;
+}
+.graph {
+  position: relative;
+  height: 46px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;}
+::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+    .bar{
+      position:relative;
+      display:inline-block;
+      height:46px;
+      background:#ddd;
+      border-radius:4px;
+      overflow:hidden;
+      &+.bar{
+        margin-left:-5px;
+        padding-right:5px;
+        box-sizing:content-box;
+        border-radius:0 4px 4px 0;
+      }
+      &.green{
+        z-index:1;
+        background: #14d57e;
+      }
+      &.pink{
+        background: #e750b0;
+      }
+      &.clear{
+        background:transparent;
+        .desc{
+          color:#000;
+        }
+      }
+      .desc{
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:0;
+        text-align:center;
+        font-size:12px;
+        line-height:16px;
+        color:#fff;
+        -webkit-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%);
+        em{
+          font-style:normal;
+          font-size:16px;
+          font-weight:700;
+        }
+        dd{
+          margin:0;
+        }
+      }
+    }
+  }
+  .fixed_data{
+    position:absolute;
+    top:52px;
+    width:120px;
+    margin:0;
+    text-align:center;
+    font-size:10px;
+    color:#000;
+    &:before{
+      content:'';
+      position:absolute;
+      top:-53px;
+      left:50%;
+      width:1px;
+      height:50px;
+      border-left:1px dashed #bababa;
+    }
+    .item{
+      float:left;
+      +.item{
+        dt{
+          padding-left:8px;
+          &:before{
+            content:'/';
+            position:absolute;
+            top:0;
+            left:2px;
+          }
+        }
+        dd{
+          &:before{
+            content:'/';
+            position:absolute;
+            top:2px;
+            left:-1px;
+          }
+        }
+      }
+    }
+    dt{
+      position:relative;
+    }
+    dd{
+      margin:0;
+      position:relative;
+      em{
+        font-style:normal;
+        font-size:13px;
+        font-weight:700;
+      }
+    }
+  }
+}

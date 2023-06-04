@@ -1,0 +1,47 @@
+<!--https://velog.io/@hsecode/HTMLCSS-%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stick_graph_style.css">
+    <title>Stick-Graph</title>
+</head>
+<body>
+    <div class="stats_graph_box">
+        <div class="graph">
+            <!-- 비율에 따라 width 값 조정 -->
+            <div class="bar green" style="width:40%;">
+                <dl class="desc">
+                    <dt>Data 1</dt>
+                    <dd><em>50</em>개</dd>
+                </dl>
+            </div>
+            <div class="bar pink" style="width:10%">
+                <dl class="desc">
+                    <dt>Data 2</dt>
+                    <dd><em>8</em>개</dd>
+                </dl>
+            </div>
+            <div class="bar clear" style="width:30%">
+                <dl class="desc">
+                    <dt>Data etc.</dt>
+                    <dd><em>72</em>개</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 위치시킬 값에 따라 left 값 조정 -->
+        <dl class="fixed_data" style="left:75%;">
+            <div class="item">
+                <dt>data data</dt>
+                <dd><em>21</em>개</dd>
+            </div>
+            <div class="item">
+                <dt>data data data</dt>
+                <dd><em>190</em>개</dd>
+            </div>
+        </dl>
+    </div>
+</body>
+</html>
