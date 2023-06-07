@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>막대 그래프</title>
+  <style>
+    .chart {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .bar-container {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .bar {
+      background-color: #4CAF50;
+      width: 20px;
+      transition: height 0.5s;
+    }
+  </style>
+</head>
+<body>
+<div class="chart">
+  <div class="bar-container">
+    <div class="bar" style="height: 20%;"></div>
+    <div class="bar" style="height: 50%;"></div>
+    <div class="bar" style="height: 80%;"></div>
+  </div>
+</div>
+</body>
+</html>

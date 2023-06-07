@@ -1,120 +1,106 @@
-.stats_graph_box {
-  position: relative;
-  padding-bottom: 20px;
+ul, li {
+  list-style: none;
 }
-.graph {
+
+.vertical_chart_box {
   position: relative;
-  height: 46px;
-  background: #f0f0f0;
-  border-radius: 4px;
-  font-size: 0;
-  white-space: nowrap;
-  overflow: hidden;}
-::after {
-  content: '';
+}
+.vertical_chart_box .chart_box {
+  position: relative;
+  margin-bottom: 45px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  height: 200px;
+  width: 45%;
+  padding-left: 40px;
+}
+.vertical_chart_box .axis_y {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 100%;
+  font-size: 1px;
+  color: black;
+}
+.vertical_chart_box .axis_y:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: black;
+}
+.vertical_chart_box .axis_x {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+.vertical_chart_box .axis_x .item {
+  flex: 1;
+  position: relative;
+}
+.vertical_chart_box .axis_x .item .text_box {
+  position: absolute;
+  bottom: -43px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.vertical_chart_box .axis_x .item .text_box .day {
   display: block;
-  clear: both;
+  font-size: 12px;
+  line-height: 19px;
+  color: black;
 }
-    .bar{
-      position:relative;
-      display:inline-block;
-      height:46px;
-      background:#ddd;
-      border-radius:4px;
-      overflow:hidden;
-      &+.bar{
-        margin-left:-5px;
-        padding-right:5px;
-        box-sizing:content-box;
-        border-radius:0 4px 4px 0;
-      }
-      &.green{
-        z-index:1;
-        background: #14d57e;
-      }
-      &.pink{
-        background: #e750b0;
-      }
-      &.clear{
-        background:transparent;
-        .desc{
-          color:#000;
-        }
-      }
-      .desc{
-        position:absolute;
-        top:50%;
-        left:50%;
-        margin:0;
-        text-align:center;
-        font-size:12px;
-        line-height:16px;
-        color:#fff;
-        -webkit-transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-        -o-transform:translate(-50%,-50%);
-        transform:translate(-50%,-50%);
-        em{
-          font-style:normal;
-          font-size:16px;
-          font-weight:700;
-        }
-        dd{
-          margin:0;
-        }
-      }
-    }
-  }
-  .fixed_data{
-    position:absolute;
-    top:52px;
-    width:120px;
-    margin:0;
-    text-align:center;
-    font-size:10px;
-    color:#000;
-    &:before{
-      content:'';
-      position:absolute;
-      top:-53px;
-      left:50%;
-      width:1px;
-      height:50px;
-      border-left:1px dashed #bababa;
-    }
-    .item{
-      float:left;
-      +.item{
-        dt{
-          padding-left:8px;
-          &:before{
-            content:'/';
-            position:absolute;
-            top:0;
-            left:2px;
-          }
-        }
-        dd{
-          &:before{
-            content:'/';
-            position:absolute;
-            top:2px;
-            left:-1px;
-          }
-        }
-      }
-    }
-    dt{
-      position:relative;
-    }
-    dd{
-      margin:0;
-      position:relative;
-      em{
-        font-style:normal;
-        font-size:13px;
-        font-weight:700;
-      }
-    }
-  }
+.vertical_chart_box .axis_x .graph {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 25px;
+  height: 100%;
+  background: none;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.vertical_chart_box .axis_x .graph .time {
+  display: block;
+  position: relative;
+  margin-bottom: -4px;
+  padding-top: 4px;
+  box-sizing: content-box;
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+.vertical_chart_box .axis_x .graph .time.data {
+  background: navy;
+  z-index: 3;
+}
+.vertical_chart_box .axis_x button.graph {
+  border: 0;
 }
