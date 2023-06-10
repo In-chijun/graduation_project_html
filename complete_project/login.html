@@ -10,7 +10,7 @@
             </div>
 
             <form action="#" method="POST" autocomplete="off">
-
+                {% csrf_token %}
                 <div class="login_highMargin">
                     <input type="text" name="id" placeholder=" SECS ID" title="아이디" class="input_text" maxlength="41" value="">
                     <!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->

@@ -9,7 +9,7 @@
             </div>
 
             <form action="#" method="POST" autocomplete="off">
-
+                {% csrf_token %}
                 <div class="login_highMargin">
                     <input type="text" class="input_text" name="id" placeholder=" Username" title="이름" class="input_text" maxlength="41" value="">
                 </div>
