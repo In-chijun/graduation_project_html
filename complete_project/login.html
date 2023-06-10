@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"defer></script>
-    <title>Login</title>
-</head>
+{% block title %}Login{% endblock %}
 
-<body>
-    <nav class="navbar">
-
-        <div class="navbar__logo">
-            <a href="main.html">SECS</a>
-        </div>
-
-        <ul class="navbar__menu">
-            <li><a href="#">Introduce</a></li>
-            <li><a href="#">IoT Space</a></li>
-            <li><a href="#">AIoT Space</a></li>
-        </ul>
-
-        <ul class="navbar__sign">
-            <li><a id="navbar__sign-in" href="login.html">Sign in</a></li>
-            <li><a id="navbar__sign-up" href="signUp.html">Sign up</a></li>
-        </ul>
-
-        <a href="#" class="navbar__toggleBtn"></a>
-    </nav>
-
+{% block content %}
     <div class="login_signUp">
         <div class="login_signUp-sign_div">
             <div class="login_margin" id="login_ment">
@@ -41,20 +13,20 @@
 
                 <div class="login_highMargin">
                     <input type="text" name="id" placeholder=" SECS ID" title="아이디" class="input_text" maxlength="41" value="">
-    <!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->
-    <!--                    <span class="icon_delete">-->
-    <!--                        <span class="blind">삭제</span>-->
-    <!--                    </span>-->
-    <!--                </span>-->
+                    <!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->
+                    <!--                    <span class="icon_delete">-->
+                    <!--                        <span class="blind">삭제</span>-->
+                    <!--                    </span>-->
+                    <!--                </span>-->
                 </div>
 
                 <div class="login_margin">
                     <input type="password" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
-    <!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
-    <!--                    <span class="icon_delete">-->
-    <!--                        <span class="blind">삭제</span>-->
-    <!--                    </span>-->
-    <!--                </span>-->
+                    <!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
+                    <!--                    <span class="icon_delete">-->
+                    <!--                        <span class="blind">삭제</span>-->
+                    <!--                    </span>-->
+                    <!--                </span>-->
                 </div>
 
                 <div class="login_margin">
@@ -70,5 +42,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
