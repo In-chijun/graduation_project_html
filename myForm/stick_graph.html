@@ -7,41 +7,63 @@
 
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales'],
-        ['1',  1000],
-        ['2',  250],
-        ['3',  660],
-        ['4',  460],
-        ['5',  1000],
-        ['6',  250],
-        ['7',  660],
-        ['8',  460],
-        ['9',  1000],
-        ['10',  250],
-        ['11',  660],
-        ['4',  460],
-        ['1',  1000],
-        ['2',  250],
-        ['3',  660],
-        ['4',  460],
-        ['1',  1000],
-        ['2',  250],
-        ['3',  660],
-        ['4',  460],
-        ['1',  1000],
-        ['2',  250],
-        ['3',  660],
-        ['4',  460],
+        ['Month', 'Energy'],
+        [1,  1000],
+        [2,  250],
+        [3,  660],
+        [4,  460],
+        [5,  1000],
+        [6,  250],
+        [7,  660],
+        [8,  460],
+        [9,  1000],
+        [10,  250],
+        [11,  1000],
+        [12,  250],
+        [13,  660],
+        [14,  460],
+        [15,  1000],
+        [16,  250],
+        [17,  660],
+        [18,  460],
+        [19,  1000],
+        [20,  250],
+        [21,  1000],
+        [22,  250],
+        [23,  660],
+        [24,  460],
+        [25,  1000],
+        [26,  250],
+        [27,  660],
+        [28,  460],
+        [29,  1000],
+        [30,  250],
+        [31,  1000],
       ]);
 
       var options = {
-        title: 'Company Performance',
         curveType: 'none',
-        legend: { position: 'bottom' },
+        legend: 'none',
         vAxis: {
-          title: 'Value',
-          ticks: [0, 250, 500, 750, 1000] // 숫자 배열로 눈금 설정
+          ticks: [0, 250, 500, 750, 1000],
         },
+        hAxis: {
+          ticks: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
+          slantedText: false,
+          slantedTextAngle: 0,
+        },
+        pointSize: 5, // 동그라미 크기
+        pointShape: { type: 'circle', rotation: 180, strokeWidth: 2, fill: { color: 'white' } }, // 동그라미 스타일 설정
+        lineWidth: 1, // 그래프 선 굵기
+        series: {
+          0: {
+            pointShape: { type: 'circle', rotation: 180 },
+            color: 'red',
+          },
+        },
+        crosshair: {
+          trigger: 'none'
+        }
       };
 
       var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
