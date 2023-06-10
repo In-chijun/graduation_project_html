@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box; /* 크기를 border까지로 적용하는 것.(기본값은 content-box) */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  border-bottom: 1px solid black;
+}
+
+.navbar__logo a {
+  display: flex;
+  width: 130px;
+  padding-left: 15px;
+  font-size: 30px;
+  font-weight: 1000;
+}
+
+.navbar__menu {
+  list-style: none; /* li 태그 앞에 있는 구분점 삭제 */
+  display: flex; /* 수평 배치 */
+  margin: 0;
+  padding-left: 0;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 20px;
+}
+
+.navbar__menu li {
+  padding: 8px 15px; /* 버튼들이 서로 떨어지게 패딩 추가 */
+}
+
+.navbar__sign {
+  list-style: none;
+  display: flex;
+  color: black;
+  padding-left: 0;
+  margin: 0;
+}
+.navbar__sign li {
+  padding: 8px 12px;
+  font-size: 20px;
+}
+#navbar__sign-up {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 2px 2px;
+}
+
+.navbar__toggleBtn {
+  background-image: url(../image/Hamburger_icon_black.png);
+  position: absolute;
+  right: 15px;
+}
+
+@media screen and (max-width: 750px) { /* nav바가 일정 크기 작아지면 해당 블록 코드가 적용됨 */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__sign {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toggleBtn {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .navbar__menu.active, .navbar__sign.active {
+    display: flex;
+  }
+}
+
+
+#main-body {
+  margin: 100px 100px;
+  display: flex;
+}
+.main-body-ment {
+  font-size: 60px;
+  margin: 0 70px;
+
+}
+.main-body-left-highlight {
+  font-size: 80px;
+  font-weight: 530;
+}
+#main-body-vertical {
+  border: none;
+  border-left: 1px solid black; /* 원하는 색상과 굵기로 조정 */
+  height: 700px; /* 원하는 높이로 조정 */
+}
+#main-body-rightment {
+  margin: 35% 10px;
+}
+
+.login_signUp {
+  position: relative;
+}
+.login_signUp-sign_div {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+#login_ment {
+  font-size: 30px;
+}
+
+.login_margin {
+  margin-top: 30px;
+}
+.input_text {
+  width: 400px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 25px;
+}
+.login_highMargin {
+  margin-top: 70px;
+}
+.btn_login {
+  display: block;
+  width: 100%;
+  padding: 13px 0 13px;
+  border-radius: 6px;
+  border: solid 1px rgba(0,0,0,.15);
+  background-color: #0c0c55;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 10px;
+  color: #fff;
+}
+.btn_text {
+  font-size: 25px;
+}
+#login-signIn_btn {
+  border: none;
+  color: blue;
+  background: none;
+  cursor: pointer;
+}
+
+#signUp_ment {
+  font-size: 30px;
+  font-weight: bold;
+}
+.btn_signUp {
+  display: block;
+  width: 120px;
+  height: 46px;
+  border-radius: 11px;
+  border: solid 1px rgba(0,0,0,.15);
+  background-color: #0c0c55;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 0px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+#status_body {
+  text-align: center;
+  margin: 0 300px;
+}
+.status_margin {
+  margin-top: 120px;
+}
+#status_body-top {
+  font-size: 60px;
+  font-weight: bold;
+}
+#status_body-middle {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+#btn_statistic {
+  display: flex;
+  width: 240px;
+  padding: 30px 50px;
+  border-radius: 16px;
+  border: solid 1px rgba(0,0,0,.15);
+  background-color: #0c0c55;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 0px;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#statistic_ment {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  line-height: 0;
+}
+#statistic_graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#statistic_vertical {
+  border: none;
+  border-left: 1px solid black; /* 원하는 색상과 굵기로 조정 */
+  height: 700px; /* 원하는 높이로 조정 */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"defer></script>
+    <title>Status</title>
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="navbar__logo">
+            <a href="">SECS</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">IoT Space</a></li>
+            <li><a href="#">AIoT Space</a></li>
+        </ul>
+
+        <ul class="navbar__sign">
+            <li><a id="navbar__sign-in" href="login.html">Sign in</a></li>
+            <li><a id="navbar__sign-up" href="signUp.html">Sign up</a></li>
+        </ul>
+
+        <a href="#" class="navbar__toggleBtn"></a>
+    </nav>
+
+
+    <div id="status_body">
+        <div class="status_margin" id="status_body-top">IoT Space</div>
+        <div class="status_margin" id="status_body-middle">
+            <div>
+                현재온도: {{ 24 }}ºC
+            </div>
+            <div>
+                감지된 물체: {{ X }}
+            </div>
+        </div>
+        <div class="status_margin">
+            <a id="btn_statistic" href="statistic.html">
+                <span class="btn_text">전력 소모량</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

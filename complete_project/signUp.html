@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"defer></script>
-    <title>Login</title>
+    <title>Sign-Up</title>
 </head>
 
 <body>
@@ -33,41 +33,32 @@
 
     <div class="login_signUp">
         <div class="login_signUp-sign_div">
-            <div class="login_margin" id="login_ment">
-                Sign in to SECS
+            <div id="signUp_ment">
+                SECS ID 생성
             </div>
 
             <form action="#" method="POST" autocomplete="off">
 
                 <div class="login_highMargin">
-                    <input type="text" name="id" placeholder=" SECS ID" title="아이디" class="input_text" maxlength="41" value="">
-    <!--                <span role="button" class="btn_delete" id="id_clear" style="display: block;">-->
-    <!--                    <span class="icon_delete">-->
-    <!--                        <span class="blind">삭제</span>-->
-    <!--                    </span>-->
-    <!--                </span>-->
+                    <input type="text" class="input_text" name="id" placeholder=" Username" title="이름" class="input_text" maxlength="41" value="">
                 </div>
-
+                <div class="login_margin">
+                    <input type="email" class="input_text" name="email" placeholder=" Email" title="이메일" class="input_text" maxlength="41" value="">
+                </div>
+                새 SECS ID로 사용될 주소입니다.
                 <div class="login_margin">
                     <input type="password" name="pw" placeholder=" Password" title="비밀번호" class="input_text" maxlength="16">
-    <!--                <span role="button" class="btn_delete" id="pw_clear" style="display: block;">-->
-    <!--                    <span class="icon_delete">-->
-    <!--                        <span class="blind">삭제</span>-->
-    <!--                    </span>-->
-    <!--                </span>-->
+                </div>
+                <div class="login_margin">
+                    <input type="password" name="pw" placeholder=" Confirm Password" title="비밀번호 확인" class="input_text" maxlength="16">
                 </div>
 
                 <div class="login_margin">
-                    <button type="submit" class="btn_login">
-                        <span class="btn_text">Sign in</span>
+                    <button type="submit" class="btn_signUp">
+                        <span class="btn_text">Sign up</span>
                     </button>
                 </div>
-
             </form>
-
-            <div class="login_highMargin">
-                <p>SECS 계정이 없으신가요? <a id="login-signIn_btn" href="signUp.html">지금 만드세요.</a></p>
-            </div>
         </div>
     </div>
 </body>
