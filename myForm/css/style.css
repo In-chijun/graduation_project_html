@@ -204,9 +204,9 @@ a {
 }
 #status_body-middle {
   display: flex;
+  justify-content: space-between;
   font-size: 30px;
   font-weight: bold;
-  justify-content: space-between;
 }
 #btn_statistic {
   display: flex;
@@ -239,4 +239,56 @@ a {
   border: none;
   border-left: 1px solid black; /* 원하는 색상과 굵기로 조정 */
   height: 700px; /* 원하는 높이로 조정 */
+}
+
+.introduce-body-building_photo {
+  position: relative;
+}
+#building_photo-ment {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#building_photo-box {
+  background: navy;
+  color: white;
+  position: absolute;
+  width: 850px;
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+}
+#box-bottom {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+#box-bottom div {
+  text-align: center;
+}
+#bottom-IoT {
+  border: 3px solid greenyellow;
+  border-radius: 35px;
+  padding: 5px 25px;
+  color: greenyellow;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+#bottom-AIoT {
+  border: 3px solid orange;
+  border-radius: 35px;
+  padding: 5px 25px;
+  color: orange;
+  font-size: 40px;
+  font-weight: bold;
 }
