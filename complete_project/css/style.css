@@ -186,7 +186,7 @@ a {
   background-color: #0c0c55;
   box-sizing: border-box;
   cursor: pointer;
-  line-height: 0px;
+  line-height: 0;
   color: #fff;
   margin: 0 auto;
 }
@@ -204,9 +204,9 @@ a {
 }
 #status_body-middle {
   display: flex;
+  justify-content: space-between;
   font-size: 30px;
   font-weight: bold;
-  justify-content: space-between;
 }
 #btn_statistic {
   display: flex;
@@ -217,7 +217,7 @@ a {
   background-color: #0c0c55;
   box-sizing: border-box;
   cursor: pointer;
-  line-height: 0px;
+  line-height: 0;
   color: #fff;
   margin: 0 auto;
   font-weight: bold;
@@ -239,4 +239,150 @@ a {
   border: none;
   border-left: 1px solid black; /* 원하는 색상과 굵기로 조정 */
   height: 700px; /* 원하는 높이로 조정 */
+}
+
+
+/*introduce page*/
+#introduce-body-building {
+  position: relative;
+}
+#building-ment {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#building-box {
+  background: navy;
+  color: white;
+  position: absolute;
+  width: 850px;
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+}
+#box-bottom {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+#box-bottom div {
+  text-align: center;
+}
+#bottom-IoT {
+  border: 3px solid greenyellow;
+  border-radius: 35px;
+  padding: 5px 25px;
+  color: greenyellow;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+#bottom-AIoT {
+  border: 3px solid orange;
+  border-radius: 35px;
+  padding: 5px 25px;
+  color: orange;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#body-factory {
+  margin-top: 100px;
+}
+#factory-top_ment {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+#factory-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+#factory-bottom p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#body-carbon_statistic {
+  margin-top: 100px;
+}
+#body-carbon_statistic p {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+#body-carbon_statistic img {
+  display: block;
+  margin: 0 auto;
+}
+
+#body-AI_AIoT {
+  margin: 150px 150px 0;
+}
+#AI_AIoT-middle {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+#AI_AIoT-middle div {
+  margin-top: 30px;
+  text-align: center;
+}
+#AI_AIoT-middle span {
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 0 rgba(0.5, 0.5, 0.5, 0.9);
+}
+#AI_AIoT-bottom {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+#body-IoT_AIoT_space {
+  margin: 120px 150px 150px;
+}
+#body-IoT_AIoT_space p {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 60px;
+}
+#body-IoT_AIoT_space span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#body-effect_application {
+  background-color: black;
+  color: white;
+  padding: 90px 80px 0;
+}
+.effect_application-title {
+  font-size: 80px;
+  font-weight: bold;
+}
+#body-effect_application p {
+  font-size: 40px;
+  font-weight: bold;
+}
+#effect_application-bottom {
+  font-size: 30px;
+  display: block;
+  text-align: center;
 }

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div id="introduce-body">
+        <div id="introduce-body-building">
+            <img src="image/building.jpg" style="width: 100%; height: auto;">
+            <div id="building-ment">What is SECS?</div>
+            <div id="building-box">
+                <span style="font-size: 30px;">SECS란?</span>
+                <p>센서와 카메라를 이용한 2개의 공간의 사용 기술에 따라 에너지가 얼마만큼 절약되는지를 비교하는 시스템</p>
+                <hr>
+                <div id="box-bottom">
+                    <div>
+                        <span id="bottom-IoT">IoT Space</span>
+                        <p>온도 센서 + 적외선 센서</p>
+                    </div>
+                    <div>
+                        <span id="bottom-AIoT">AIoT Space</span>
+                        <p>온도 센서 + 적외선 센서 + 카메라</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="body-factory">
+            <p id="factory-top_ment">늘어나는 온실가스</p>
+            <img src="image/factory.jpg" style="width: 100%; height: auto;">
+            <div id="factory-bottom">
+                <p>
+                    탄소 배출 세계 9위<br>
+                    대한민국
+                </p>
+                <p>
+                    세계 탄소 배출량의 1.7%<br>
+                    (2020년 기준)
+                </p>
+            </div>
+        </div>
+
+        <div id="body-carbon_statistic">
+            <p>
+                건물 부문은<br>
+                국내 전체 7%
+            </p>
+            <img src="image/CarbonEmissionStatistics.JPG" style="width: 80%; height: auto;">
+
+        </div>
+
+        <div id="body-AI_AIoT">
+            <p style="font-size: 30px; font-weight: bold">AI와 IoT의 완벽한 궁합</p>
+            <div id="AI_AIoT-middle">
+                <div>
+                    <span>IoT Space</span>
+                    <p>
+                        온도 측정<br>
+                        적외선 센서
+                    </p>
+                </div>
+                <div>
+                    <span>AIoT Space</span>
+                    <p>
+                        온도 측정<br>
+                        적외선 센서<br>
+                        사람 인식
+                    </p>
+                </div>
+            </div>
+            <div id="AI_AIoT-bottom">
+                <p>온도 센서는 쿨링팬을, 적외선 센서는 LED를.</p>
+                <p>거기에 사람을 인식하는 카메라까지</p>
+            </div>
+        </div>
+
+        <div id="body-IoT_AIoT_space">
+            <p>IoT Space</p>
+            <span>
+                IoT Space는 온도 센서와 적외선 센서를 사용한 공간입니다.<br>
+                온도 센서는 쿨링팬과 연결하여 일정 온도 이상이 되면<br>
+                자동으로 쿨링팬을 작동시킵니다. 적외선 센서는 LED 전구와 연결하여<br>
+                물체가 감지되면 자동으로 전구를 켜줍니다.
+            </span>
+            <p>AIoT Space</p>
+            <span>
+                AIoT Space는 온도 센서와 적외선 센서, 그리고 카메라를 사용한<br>
+                공간입니다. 온도 센서와 적외선 센서의 사용은 IoT Space와 동일합니다.<br>
+                하지만 카메라를 이용하여 적외선 센서에 감지된 물체가<br>
+                사람인지 판별하고, 사람일 경우에만 LED 전구를 켜줍니다.
+            </span>
+        </div>
+
+        <div id="body-effect_application">
+            <span class="effect_application-title">기대 효과<br></span>
+            <p>- 에너지 절약에 대한 의지를 고취</p>
+            <p>- AIoT를 이용한 스마트 에너지 관리 시스템의 필요성 강조<br></p>
+            <span class="effect_application-title"><br>활용 방안</span>
+            <p>- 가시적인 데이터로 에너지 비용 예측</p>
+            <p>- 환경과 에너지 문제에 대한 인식 제고</p>
+            <p>- 친환경 건축물 인증 제도의 마케팅 전략으로 활용</p>
+            <hr>
+            <span id="effect_application-bottom">Smart Energy Conversation System</span>
+        </div>
+    </div>
+{% endblock %}
