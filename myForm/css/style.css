@@ -186,7 +186,7 @@ a {
   background-color: #0c0c55;
   box-sizing: border-box;
   cursor: pointer;
-  line-height: 0px;
+  line-height: 0;
   color: #fff;
   margin: 0 auto;
 }
@@ -217,7 +217,7 @@ a {
   background-color: #0c0c55;
   box-sizing: border-box;
   cursor: pointer;
-  line-height: 0px;
+  line-height: 0;
   color: #fff;
   margin: 0 auto;
   font-weight: bold;
@@ -348,7 +348,7 @@ a {
   font-weight: bold;
   display: flex;
   align-items: center;
-  box-shadow: 2px 2px 0px rgba(0.5, 0.5, 0.5, 0.9);
+  box-shadow: 2px 2px 0 rgba(0.5, 0.5, 0.5, 0.9);
 }
 #AI_AIoT-bottom {
   text-align: center;
