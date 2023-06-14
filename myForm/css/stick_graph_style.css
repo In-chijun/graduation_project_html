@@ -1,23 +1,27 @@
 ul, li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .vertical_chart_box {
-  position: relative;
+  position: absolute;
+  width: 45%;
+  height: 400px;
+  margin-bottom: 45px;
+  margin-top: 10%;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
+
 .vertical_chart_box .chart_box {
   position: relative;
-  margin-bottom: 45px;
-  padding-left: 20px;
   box-sizing: border-box;
-  height: 200px;
-  width: 45%;
-  padding-left: 40px;
+  height: 100%;
+  width: 100%;
 }
+
 .vertical_chart_box .axis_y {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -32,6 +36,7 @@ ul, li {
   font-size: 1px;
   color: black;
 }
+
 .vertical_chart_box .axis_y:before {
   content: "";
   position: absolute;
@@ -41,42 +46,38 @@ ul, li {
   width: 1px;
   background: black;
 }
+
 .vertical_chart_box .axis_x {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
   border-bottom: 1px solid black;
 }
+
 .vertical_chart_box .axis_x .item {
   flex: 1;
   position: relative;
 }
+
 .vertical_chart_box .axis_x .item .text_box {
   position: absolute;
   bottom: -43px;
   left: 50%;
   text-align: center;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
 }
+
 .vertical_chart_box .axis_x .item .text_box .day {
   display: block;
   font-size: 12px;
   line-height: 19px;
   color: black;
 }
+
 .vertical_chart_box .axis_x .graph {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -88,6 +89,7 @@ ul, li {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
+
 .vertical_chart_box .axis_x .graph .time {
   display: block;
   position: relative;
@@ -97,10 +99,33 @@ ul, li {
   width: 100%;
   border-radius: 3px 3px 0 0;
 }
+
 .vertical_chart_box .axis_x .graph .time.data {
   background: navy;
   z-index: 3;
 }
+
 .vertical_chart_box .axis_x button.graph {
   border: 0;
+}
+
+#statistic_ment {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  line-height: 0;
+}
+
+#statistic_graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 뷰포트 높이에 맞추기 */
+  overflow: hidden; /* 스크롤 제거 */
+}
+
+#statistic_vertical {
+  border: none;
+  border-left: 1px solid black;
+  height: 70%; /* 원하는 높이로 조정 */
 }
